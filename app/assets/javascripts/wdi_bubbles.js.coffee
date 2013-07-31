@@ -1,26 +1,30 @@
 $ ->
   maxValue = 1000;
+  GA_RED = '#f03'
+  GA_GREY = '#222'
 
   data =
     label: "Full-Stack Web Development"
     amount: maxValue
-    color: "#0066bb" # color for root node, will be inherited by children
+    color: GA_GREY # color for root node, will be inherited by children
     children: [
       label: "Front-end"
-      amount: maxValue/4
+      amount: maxValue/3
+      color: GA_RED
     ,
       label: "Back-end"
-      amount: maxValue/4
+      amount: maxValue/3
+      color: GA_RED
     ,
       label: "Computer Science"
-      amount: maxValue/4
-      color: "#ff3300"
+      amount: maxValue/3
+      color: GA_RED
       children: [
         label: 'Data Structures'
-        amount: maxValue/16
+        amount: maxValue/9
       ,
         label: 'Languages'
-        amount: maxValue/16
+        amount: maxValue/9
       ]
     ]
 
