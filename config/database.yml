@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: wdi_bubbles_development
+  pool: 5
+  username: dylanoshea
+  password:
