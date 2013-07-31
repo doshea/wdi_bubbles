@@ -6,19 +6,19 @@ $ ->
   data =
     label: "Full-Stack Web Development"
     amount: maxValue
-    color: GA_GREY # color for root node, will be inherited by children
+    color: GA_RED # color for root node, will be inherited by children
     children: [
       label: "Front-end"
       amount: maxValue/3
-      color: GA_RED
+      color: GA_GREY
     ,
       label: "Back-end"
       amount: maxValue/3
-      color: GA_RED
+      color: GA_GREY
     ,
       label: "Computer Science"
       amount: maxValue/3
-      color: GA_RED
+      color: GA_GREY
       children: [
         label: 'Data Structures'
         amount: maxValue/9
