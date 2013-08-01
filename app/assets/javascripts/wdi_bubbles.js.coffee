@@ -21,24 +21,98 @@ class wdi
   @data:
     label: "Full-Stack Web Development"
     children: [
-      label: "Back-End"
+      label: 'Back-End'
       children: [
-        label: 'Databases'
+        label: 'Database Management System'
+        children: [
+          label: 'Data Persistence'
+        ,
+          label: 'SQL'
+          children: [
+            label: 'PostgreSQL'
+          ,
+            label: 'MySQL'
+            mystery: true
+          ,
+            label: 'SQLite'
+          ,
+            label: 'Oracle'
+            mystery: true
+          ,
+            label: 'Microsoft SQL Server'
+            mystery: true
+          ]
+        ,
+          label: 'NoSQL'
+          children: [
+            label: 'Redis'
+          ,
+            label: 'MongoDB'
+            mystery: true
+          ,
+            label: 'CouchDB'
+            mystery: true
+          ]
+        ]
       ,
-        label: 'Ruby on Rails'
+        label: 'Web App Frameworks'
+        children: [
+          label: 'Ruby on Rails'
+        ,
+          label: 'ASP.NET'
+          mystery: true
+        ,
+          label: 'Django'
+          mystery: true
+        ]
+      ,
+        label: 'Security'
+        mystery: true
       ]
     ,
-      label: 'TDD/BDD'
+      label: 'Test Driven Development'
       children: [
-        label: 'Rspec'
+        label: 'Test Frameworks'
+        children: [
+          label: 'Rspec'
+          children: [
+            label: 'Model Testing'
+            children: [
+              label: 'Attribute Tests'
+            ,
+              label: 'Validation Tests'
+            ,
+              label: 'Association Tests'
+            ,
+              label: 'Class/Instance Method Tests'
+            ]
+          ,
+            label: 'Controller Testing'
+          ,
+            label: 'Feature Testing'
+            children: [
+              label: 'Navigation (Path) Tests'
+            ,
+              label: 'DOM Element Tests'
+            ,
+              label: 'User Flow Tests'
+            ,
+              label: 'Synchronous JS Tests'
+            ]
+          ]
+        ,
+          label: 'Test Unit'
+          mystery: true
+        ,
+          label: 'Cucumber'
+        ,
+          label: 'Jasmine'
+          mystery: true
+        ]
       ,
-        label: 'Test Unit'
-        mystery: true
+        label: 'Mocking/Stubbing'
       ,
-        label: 'Cucumber'
-      ,
-        label: 'Jasmine'
-        mystery: true
+        label: 'Behavior Driven Development'
       ]
     ,
       label: 'Hosting'
@@ -104,6 +178,25 @@ class wdi
     ,
       label: "Computer Science"
       children: [
+        label: 'Data Types'
+        children: [
+          label: 'String'
+        ,
+          label: 'Integer'
+        ,
+          label: 'Float'
+        ,
+          label: 'Boolean'
+        ,
+          label: 'Array/List'
+        ,
+          label: 'Hash/Dictionary'
+        ,
+          label: 'Symbol'
+        ,
+          label: 'Nil/Null'
+        ]
+      ,
         label: 'Data Structures'
         children: [
           label: 'Stack'
@@ -150,7 +243,11 @@ class wdi
       ,
         label: 'Recursion'
         children: [
+          label: 'Base Case'
+        ,
           label: 'Fractals'
+        ,
+          label: 'Recursive Case'
         ]
       ]
     ]
