@@ -2,10 +2,13 @@ class wdi
   @maxValue: 1000
   @GA_RED: '#f03'
   @GA_GREY: '#222'
+  @GA_OUT: '#ccc'
   @SHRINK_RATIO: 3
 
   @alternate_colors_and_shrink: (obj, level) ->
-    if level % 2 == 0
+    if obj.mystery
+      obj.color = wdi.GA_OUT
+    else if level % 2 == 0
       obj.color = wdi.GA_RED
     else
       obj.color = wdi.GA_GREY
@@ -18,9 +21,16 @@ class wdi
   @data:
     label: "Full-Stack Web Development"
     children: [
-      label: "Front-end"
+      label: "Front-End"
+      children: [
+        label: 'HTML'
+      ,
+        label: 'CSS'
+      ,
+        label: 'Javascript'
+      ]
     ,
-      label: "Back-end"
+      label: "Back-End"
     ,
       label: "Computer Science"
       children: [
@@ -34,20 +44,36 @@ class wdi
         label: 'Languages'
         children: [
           label: 'Python'
+          mystery: true
         ,
           label: 'Ruby'
         ,
           label: 'R'
+          mystery: true
         ,
           label: 'Java'
+          mystery: true
         ]
       ]
+    ,
+      label: 'Project Management'
+      children: [
+        label: 'Pivotal Tracker'
+      ,
+        label: 'Scrum'
+      ,
+        label: 'Version/Revision Control'
+      ]
+    ,
+      label: 'TDD/BDD'
+    ,
+      label: 'Hosting'
     ]
 
   @document_ready: ->
-    console.log wdi.data
+    #Automatically and recursively assigns colors and amounts to all bubbles, starting from root bubble
     wdi.alternate_colors_and_shrink(wdi.data, 0)
-    console.log wdi.data
+    #Now that labels, colors and amounts are set, builds the BubbleTree
     new BubbleTree(
       data: wdi.data
       container: ".bubbletree"
