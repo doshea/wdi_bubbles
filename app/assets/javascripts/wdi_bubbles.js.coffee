@@ -379,6 +379,14 @@ class wdi
             label: 'Gradients'
           ,
             label: 'Alpha/Opacity'
+          ,
+            label: 'Scale'
+          , 
+            label: 'Rotate'
+          ,
+            label: 'Skew'
+          ,
+            label: 'Multiple Backgrounds'
           ]
         ,
           label: 'SASS'
