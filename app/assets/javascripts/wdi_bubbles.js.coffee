@@ -57,6 +57,10 @@ class wdi
       ,
         label: 'Web App Frameworks'
         children: [
+          label: 'Node.js'
+        ,
+          label: 'REST'
+        ,
           label: 'Ruby on Rails'
           children: [
             label: 'Models'
@@ -85,7 +89,7 @@ class wdi
                 label: 'Polymorphism'
               ]
             ,
-              label: 'Class vs. Instance'
+              label: 'Instance vs. Class vs. Global'
             ,
               label: 'Validations'
               children: [
@@ -164,6 +168,8 @@ class wdi
               label: 'Member vs. Collection'
             ,
               label: 'Custom Resourceful Routes'
+            ,
+              label: 'HTTP Request Verbs'
             ]
           ,
             label: 'Migrations'
@@ -182,6 +188,19 @@ class wdi
             label: 'Gemfile'
           ,
             label: 'Rails 4'
+            children: [
+              label: 'Strong Parameters'
+            ,
+              label: 'ActiveModel::Model'
+            ,
+              label: 'Better View Helpers'
+            ,
+              label: 'Turbolinks'
+            ,
+              label: 'ActiveController::Live'
+            ,
+              label: 'Concerns'
+            ]
           ]
         ,
           label: 'ASP.NET'
@@ -265,17 +284,29 @@ class wdi
         label: 'Rails Hosting'
         children: [
           label: 'Heroku'
+          children: [
+            label: 'Config Vars'
+          ,
+            label: 'Rails 3.x Precompilation'
+          ,
+            label: 'Add-ons'
+          ]
         ,
           label: 'Amazon S3'
           mystery: true
         ,
           label: 'WebFaction'
           mystery: true
+        ,
+          label: 'Rackspace'
+          mystery: true
         ]
       ]
     ,
       label: 'Project Management'
       children: [
+        label: 'Agile Methodology'
+      ,
         label: 'Pivotal Tracker'
       ,
         label: 'Scrum'
@@ -316,6 +347,15 @@ class wdi
       ,
         label: 'CSS'
         children: [
+          label: 'Front-End Frameworks'
+          children: [
+            label: 'Bootstrap'
+          ,
+            label: 'Foundation'
+          ,
+            label: 'Skeleton'
+          ]
+        ,
           label: 'Selectors'
           children: [
             label: 'id'
@@ -382,11 +422,40 @@ class wdi
           ]
         ,
           label: 'SASS'
+          children: [
+            label: 'Mixins'
+          ,
+            label: 'Style Nesting'
+          ,
+            label: 'CSS Variables'
+          ]
+        ,
+          label: 'LESS'
+          mystery: true
         ]
       ,
         label: 'Javascript'
         children: [
           label: 'jQuery'
+          children: [
+            label: 'jQuery UI'
+          ,
+            label: 'DOM Manipulation'
+          ,
+            label: 'DOM Traversal'
+          ,
+            label: 'Easy AJAX'
+          ]
+        ,
+          label: 'Visualization Libraries'
+          children: [
+            label: 'd3.js'
+          ,
+            label: 'Morris.js'
+          ,
+            label: 'BubbleTree.js'
+            mystery: true
+          ]
         ,
           label: 'Underscore.js'
         ,
@@ -397,7 +466,9 @@ class wdi
             label: 'Object-Oriented Support'
           ]
         ,
-          label: 'Front-end MVC'
+          label: 'AJAX'
+        ,
+          label: 'Front-end MVCs'
           children: [
             label: 'Backbone.js'
           ,
@@ -445,6 +516,8 @@ class wdi
           label: 'Binary Tree'
         ,
           label: 'Graph'
+        ,
+          label: 'Digraph'
         ]
       ,
         label: 'Flow Control'
