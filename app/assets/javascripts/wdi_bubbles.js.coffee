@@ -407,6 +407,13 @@ class wdi
             label: '@media'
           ,
             label: 'transform'
+            children: [
+              label: 'Scale'
+            , 
+              label: 'Rotate'
+            ,
+              label: 'Skew'
+            ]
           ,
             label: 'transition'
           ,
@@ -419,6 +426,8 @@ class wdi
             label: 'Gradients'
           ,
             label: 'Alpha/Opacity'
+          ,
+            label: 'Multiple Backgrounds'
           ]
         ,
           label: 'SASS'

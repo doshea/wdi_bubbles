@@ -3,5 +3,5 @@ development:
   encoding: unicode
   database: wdi_bubbles_development
   pool: 5
-  username: dylanoshea
+  username: ryankuhel
   password:
