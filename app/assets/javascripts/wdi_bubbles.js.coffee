@@ -58,6 +58,131 @@ class wdi
         label: 'Web App Frameworks'
         children: [
           label: 'Ruby on Rails'
+          children: [
+            label: 'Models'
+            children: [
+              label: 'ActiveRecord'
+              children: [
+                label: 'Database Dependence'
+              ,
+                label: 'Naming Conventions'
+              ]
+            ,
+              label: 'Associations'
+              children: [
+                label: 'belongs_to'
+              ,
+                label: 'has_many'
+              ,
+                label: 'has_one'
+              ,
+                label: 'HABTM'
+              ,
+                label: 'STI'
+              ,
+                label: 'Self-Joins'
+              ,
+                label: 'Polymorphism'
+              ]
+            ,
+              label: 'Class vs. Instance'
+            ,
+              label: 'Validations'
+              children: [
+                label: 'Presence'
+              ,
+                label: 'Uniqueness'
+              ,
+                label: 'Length'
+              ,
+                label: 'Numericality'
+              ,
+                label: 'Custom'
+              ]
+            ]
+          ,
+            label: 'Views'
+            children: [
+              label: 'Embedded Ruby'
+              children: [
+                label: '.html.erb'
+              ,
+                label: '.html.haml'
+              ,
+                label: '.js.erb'
+              ]
+            ,
+              label: 'View Helpers'
+              children: [
+                label: 'link_to'
+              ,
+                label: 'form_for vs. form_tag'
+              ,
+                label: 'image_tag'
+              ,
+                label: 'f.xx_field vs. xx_field_tag'
+              ]
+            ,
+              label: 'Partials'
+            ,
+              label: 'Layouts'
+            ,
+              label: 'Yield'
+            ]
+          ,
+            label: 'Controllers'
+            children: [
+              label: 'CRUD'
+            ,
+              label: 'Callbacks/Filters/Actions'
+              children: [
+                label: 'before_'
+              ,
+                label: 'after_'
+              ,
+                label: 'around_'
+              ]
+            ,
+              label: 'Data Rendering'
+              children: [
+                label: 'HTML'
+              ,
+                label: 'JS'
+              ,
+                label: 'JSON'
+              ,
+                label: 'XML'
+              ]
+            ]
+          ,
+            label: 'Routing'
+            children: [
+              label: 'Custom Routes'
+            ,
+              label: 'Default Resources'
+            ,
+              label: 'Member vs. Collection'
+            ,
+              label: 'Custom Resourceful Routes'
+            ]
+          ,
+            label: 'Migrations'
+          ,
+            label: 'Asset Pipeline'
+          ,
+            label: 'Environments'
+            children: [
+              label: 'Development'
+            ,
+              label: 'Test'
+            ,
+              label: 'Production'
+            ]
+          ,
+            label: 'Gemfile'
+          ,
+            label: 'Rails 4'
+          ]
         ,
           label: 'ASP.NET'
           mystery: true
@@ -170,10 +295,122 @@ class wdi
       label: "Front-End"
       children: [
         label: 'HTML'
+        children: [
+          label: 'HTML5'
+          children: [
+            label: 'Semantic HTML'
+          ,
+            label: 'WebSockets'
+          ,
+            label: 'SVG'
+          ,
+            label: 'canvas'
+          ]
+        ,
+          label: 'The DOM'
+        ,
+          label: 'Tags'
+        ,
+          label: 'Attributes'
+        ]
       ,
         label: 'CSS'
+        children: [
+          label: 'Selectors'
+          children: [
+            label: 'id'
+          ,
+            label: 'class'
+          ,
+            label: 'Attributes'
+          ,
+            label: 'Pseudo-Selectors'
+            children: [
+              label: ':not'
+            ,
+              label: ':hover'
+            ,
+              label: ':focus'
+            ,
+              label: ':visited'
+            ,
+              label: ':checked'
+            ,
+              label: ':selected'
+            ,
+              label: ':nth-child(n)'
+            ]
+          ,
+            label: 'tag'
+          ]
+        ,
+          label: 'Specificity'
+          children: [
+            label: '!important'
+          ,
+            label: 'Inline Styles'
+          ]
+        ,
+          label: 'Vendor Styles'
+          children: [
+            label: '-o'
+          ,
+            label: '-ms'
+          ,
+            label: '-moz'
+          ,
+            label: '-webkit'
+          ]
+        ,
+          label: 'CSS3'
+          children: [
+            label: '@media'
+          ,
+            label: 'transform'
+          ,
+            label: 'transition'
+          ,
+            label: 'filter'
+          ,
+            label: 'border-radius'
+          ,
+            label: 'box-shadow'
+          ,
+            label: 'Gradients'
+          ,
+            label: 'Alpha/Opacity'
+          ]
+        ,
+          label: 'SASS'
+        ]
       ,
         label: 'Javascript'
+        children: [
+          label: 'jQuery'
+        ,
+          label: 'Underscore.js'
+        ,
+          label: 'Coffeescript'
+          children: [
+            label: 'Ruby-like Syntax'
+          ,
+            label: 'Object-Oriented Support'
+          ]
+        ,
+          label: 'Front-end MVC'
+          children: [
+            label: 'Backbone.js'
+          ,
+            label: 'Angular.js'
+            mystery: true
+          ,
+            label: 'Ember.js'
+            mystery: true
+          ,
+            label: 'Closure'
+            mystery: true
+          ]
+        ]
       ]
     ,
       label: "Computer Science"
@@ -182,9 +419,7 @@ class wdi
         children: [
           label: 'String'
         ,
-          label: 'Integer'
-        ,
-          label: 'Float'
+          label: 'Number/Fixnum'
         ,
           label: 'Boolean'
         ,
@@ -212,7 +447,36 @@ class wdi
           label: 'Graph'
         ]
       ,
-        label: 'Sort/Search'
+        label: 'Flow Control'
+        children: [
+          label: 'Conditionals'
+        ,
+          label: 'Loops'
+        ,
+          label: 'Exception Handling'
+        ,
+          label: 'Iterators and Enumerables'
+        ,
+          label: 'Threading'
+          mystery: true
+        ,
+          label: 'Blocks'
+        ]
+      ,
+        label: 'Object-Oriented Programming'
+        children: [
+          label: 'Classes'
+        ,
+          label: 'Objects'
+        ,
+          label: 'Methods'
+        ,
+          label: 'Modules'
+        ,
+          label: 'Inheritance'
+        ]
+      ,
+        label: 'Sorting/Searching'
         children: [
           label: 'Big O Notation'
         ,
