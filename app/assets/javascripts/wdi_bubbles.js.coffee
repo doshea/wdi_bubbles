@@ -21,6 +21,78 @@ class wdi
   @data:
     label: "Full-Stack Web Development"
     children: [
+      label: "Back-End"
+      children: [
+        label: 'Databases'
+      ,
+        label: 'Ruby on Rails'
+      ]
+    ,
+      label: 'TDD/BDD'
+      children: [
+        label: 'Rspec'
+      ,
+        label: 'Test Unit'
+        mystery: true
+      ,
+        label: 'Cucumber'
+      ,
+        label: 'Jasmine'
+        mystery: true
+      ]
+    ,
+      label: 'Hosting'
+      children: [
+        label: 'Domain Names'
+        mystery: true
+        children: [
+          label: 'Namecheap.com'
+          mystery: true
+        ,
+          label: 'Godaddy.com'
+          mystery: true
+        ]
+      ,
+        label: 'Static Hosting'
+        children: [
+          label: 'Github.io'
+        ,
+          label: 'Amazon S3'
+          mystery: true
+        ,
+          label: 'Pretty much everywhere'
+        ]
+      ,
+        label: 'Rails Hosting'
+        children: [
+          label: 'Heroku'
+        ,
+          label: 'Amazon S3'
+          mystery: true
+        ,
+          label: 'WebFaction'
+          mystery: true
+        ]
+      ]
+    ,
+      label: 'Project Management'
+      children: [
+        label: 'Pivotal Tracker'
+      ,
+        label: 'Scrum'
+      ,
+        label: 'Version/Revision Control'
+        children: [
+          label: 'Git'
+        ,
+          label: 'Mercurial'
+          mystery: true
+        ,
+          label: 'Subversion'
+          mystery: true
+        ]
+      ]
+    ,
       label: "Front-End"
       children: [
         label: 'HTML'
@@ -30,16 +102,37 @@ class wdi
         label: 'Javascript'
       ]
     ,
-      label: "Back-End"
-    ,
       label: "Computer Science"
       children: [
         label: 'Data Structures'
         children: [
           label: 'Stack'
+        ,
+          label: 'Queue'
+        ,
+          label: 'Singly-Linked List'
+        ,
+          label: 'Doubly-Linked List'
+        ,
+          label: 'Binary Tree'
+        ,
+          label: 'Graph'
         ]
       ,
-        label: 'Sorting and Searching'
+        label: 'Sort/Search'
+        children: [
+          label: 'Big O Notation'
+        ,
+          label: 'Selection Sort'
+        ,
+          label: 'Merge Sort'
+        ,
+          label: 'Bubble Sort'
+        ,
+          label: 'Depth-First Search'
+        ,
+          label: 'Breadth-First Search'
+        ]
       ,
         label: 'Languages'
         children: [
@@ -54,20 +147,12 @@ class wdi
           label: 'Java'
           mystery: true
         ]
-      ]
-    ,
-      label: 'Project Management'
-      children: [
-        label: 'Pivotal Tracker'
       ,
-        label: 'Scrum'
-      ,
-        label: 'Version/Revision Control'
+        label: 'Recursion'
+        children: [
+          label: 'Fractals'
+        ]
       ]
-    ,
-      label: 'TDD/BDD'
-    ,
-      label: 'Hosting'
     ]
 
   @document_ready: ->
