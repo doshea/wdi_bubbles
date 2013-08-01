@@ -1,34 +1,59 @@
-$ ->
-  maxValue = 1000;
-  GA_RED = '#f03'
-  GA_GREY = '#222'
+class wdi
+  @maxValue: 1000
+  @GA_RED: '#f03'
+  @GA_GREY: '#222'
+  @SHRINK_RATIO: 3
 
-  data =
+  @alternate_colors_and_shrink: (obj, level) ->
+    if level % 2 == 0
+      obj.color = wdi.GA_RED
+    else
+      obj.color = wdi.GA_GREY
+    obj.amount = wdi.maxValue/(Math.pow(wdi.SHRINK_RATIO, level+1))
+    if obj.children && obj.children.length > 0
+      for child in obj.children
+        do (child) ->
+          wdi.alternate_colors_and_shrink(child, level + 1)
+
+  @data:
     label: "Full-Stack Web Development"
-    amount: maxValue
-    color: GA_RED # color for root node, will be inherited by children
     children: [
       label: "Front-end"
-      amount: maxValue/3
-      color: GA_GREY
     ,
       label: "Back-end"
-      amount: maxValue/3
-      color: GA_GREY
     ,
       label: "Computer Science"
-      amount: maxValue/3
-      color: GA_GREY
       children: [
         label: 'Data Structures'
-        amount: maxValue/9
+        children: [
+          label: 'Stack'
+        ]
+      ,
+        label: 'Sorting and Searching'
       ,
         label: 'Languages'
-        amount: maxValue/9
+        children: [
+          label: 'Python'
+        ,
+          label: 'Ruby'
+        ,
+          label: 'R'
+        ,
+          label: 'Java'
+        ]
       ]
     ]
 
-  new BubbleTree(
-    data: data
-    container: ".bubbletree"
-  )
+  @document_ready: ->
+    console.log wdi.data
+    wdi.alternate_colors_and_shrink(wdi.data, 0)
+    console.log wdi.data
+    new BubbleTree(
+      data: wdi.data
+      container: ".bubbletree"
+    )
+
+
+$(document).ready(wdi.document_ready)
+
+
